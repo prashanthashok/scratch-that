@@ -1,5 +1,6 @@
 # scratch-that
 A single page 'Note Taking' application powered by serverless API written completely in JavaScript created using the tutorial on https://serverless-stack.com/
+
 **This implements the following features and technologies**
 
 *Features*
