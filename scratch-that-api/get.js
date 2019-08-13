@@ -14,9 +14,10 @@ export async function main(event, context) {
   };
 
   try {
-    console.log(params);
+    //console.log(params);
     const result = await dynamoDbLib.call("get", params);
-    if (result.item) {
+    //console.log("result", result);
+    if (result.Item) {
       //Return the retrieved item
       return success(result.item);
     } else {
