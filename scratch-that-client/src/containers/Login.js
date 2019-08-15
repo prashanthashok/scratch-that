@@ -21,7 +21,6 @@ class Login extends Component {
     this.setState({
       [event.target.id]: event.target.value
     });
-    console.log(this.state.email, " ", this.state.password);
   };
 
   handleSubmit = async event => {
@@ -29,7 +28,7 @@ class Login extends Component {
 
     try {
       await Auth.signIn(this.state.email, this.state.password);
-      alert("Logged in");
+      this.props.userHasAuthenticated(true);
     } catch (e) {
       alert(e.message);
     }
